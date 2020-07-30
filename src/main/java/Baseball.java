@@ -16,6 +16,16 @@ public class Baseball {
         while (strike_count != 3) {
             input = get_input();
             strike_count = strike(answer, input);
+            ball_count = ball(answer, input);
+
+            if(strike_count != 0) System.out.print(strike_count + " 스트라이크 ");
+            if(ball_count != 0) System.out.print(ball_count + " 볼 ");
+            if(strike_count == 0 && ball_count == 0) System.out.print("포볼");
+            System.out.println();
+
+            if(strike_count == 3){
+                System.out.println("3개의 숫자를 모두 맞히셨습니다! 게임 종료");
+            }
         }
     }
 
@@ -36,7 +46,7 @@ public class Baseball {
         String buffer;
         while(true){
             try{
-                System.out.println("숫자를 입력해주세요.");
+                System.out.print("숫자를 입력해주세요 : ");
                 buffer = scan.next();
                 break;
             }catch(Exception e){
