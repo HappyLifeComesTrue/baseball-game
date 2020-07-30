@@ -84,10 +84,8 @@ public class Baseball {
         while(on_play == 1){
             start_game();
 
-            while (true) {
-                System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
-                on_play = scan.nextInt();
-            }
+            System.out.println("게임을 새로 시작하려면 1, 종료하려면 2를 입력하세요.");
+            on_play = scan.nextInt();
         }
 
         scan.close();
