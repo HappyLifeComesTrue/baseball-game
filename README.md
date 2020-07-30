@@ -4,11 +4,19 @@ void start_game()
 --------------
 게임을 시작하는 메소드. 이하 메소드는 모두 이 메소드에서 불려온다.
 
-int strike(int input)
+int[] generate_number()
+-------------
+3개의 중복되지 않는 난수를 발생시킨다.
+
+int[] get_input()
+-------------
+사용자로부터 3개의 수를 입력받는다.
+
+int strike(int[] input)
 -------------
 사용자의 입력 값을 매개변수로 받아, 몇 개의 스트라이크인지 계산한다.
 
-int ball(int input)
+int ball(int[] input)
 -------------
 사용자의 입력 값을 매개변수로 받아, 몇 개의 볼인지 계산한다.
 
