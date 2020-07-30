@@ -15,6 +15,7 @@ public class Baseball {
 
         while (strike_count != 3) {
             input = get_input();
+            strike_count = strike(answer, input);
         }
     }
 
@@ -48,6 +49,14 @@ public class Baseball {
             input[i] = Character.getNumericValue(buffer.charAt(i));
         }
         return input;
+    }
+
+    static int strike(int[] answer, int[] input){
+        int result = 0;
+        for(int i = 0; i < answer.length;i++){
+            if(answer[i] == input[i]) result++;
+        }
+        return result;
     }
 
     public static void main(String[] args){
