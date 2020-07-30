@@ -6,15 +6,14 @@ public class Baseball {
     static Scanner scan = new Scanner(System.in);
 
     static void start_game() {
-        int strike = 0;
-        int ball = 0;
+        int strike_count = 0;
+        int ball_count = 0;
         int[] answer = new int[3];
         int[] input = new int[3];
 
         answer = generate_number();
 
-        while (strike != 3) {
-            System.out.println("숫자를 입력해주세요.");
+        while (strike_count != 3) {
             input = get_input();
         }
     }
@@ -33,7 +32,16 @@ public class Baseball {
     }
 
     static int[] get_input(){
-        String buffer = scan.next();
+        String buffer;
+        while(true){
+            try{
+                System.out.println("숫자를 입력해주세요.");
+                buffer = scan.next();
+                break;
+            }catch(Exception e){
+                System.out.println("잘못된 입력입니다.");
+            }
+        }
         int[] input = new int[3];
 
         for(int i = 0; i < 3; i++){
