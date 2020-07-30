@@ -10,17 +10,12 @@ public class Baseball {
         int ball = 0;
         int[] answer = new int[3];
         int[] input = new int[3];
-        String buffer = null;
 
         answer = generate_number();
 
         while (strike != 3) {
             System.out.println("숫자를 입력해주세요.");
-            buffer = scan.next();
-
-            for(int i = 0; i < 3; i++){
-                input[i] = Character.getNumericValue(buffer.charAt(i));
-            }
+            input = get_input();
         }
     }
 
@@ -30,12 +25,21 @@ public class Baseball {
 
         for (int i = 0; i < 3; i++) {
             result[i] = intGenerator.nextInt(9) + 1;
-
             for (int j = 0; j < i; j++) {   //중복 제거
                 if (result[j] == result[i]) i--;
             }
         }
         return result;
+    }
+
+    static int[] get_input(){
+        String buffer = scan.next();
+        int[] input = new int[3];
+
+        for(int i = 0; i < 3; i++){
+            input[i] = Character.getNumericValue(buffer.charAt(i));
+        }
+        return input;
     }
 
     public static void main(String[] args){
