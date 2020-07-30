@@ -59,6 +59,16 @@ public class Baseball {
         return result;
     }
 
+    static int ball(int[] answer, int[] input){
+        int result = 0;
+        for(int i = 0; i < answer.length; i++){
+            for(int j = 0; j < input.length; j++){
+                if(i != j && answer[i] == input[j]) result++;
+            }
+        }
+        return result;
+    }
+
     public static void main(String[] args){
 
         while(on_play == 1){
