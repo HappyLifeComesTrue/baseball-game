@@ -1,9 +1,10 @@
-import ui.*;
+import baseball.Game;
+import baseball.ui.*;
 
 public class Main {
 
     static boolean requestRestart(){
-        return InputHandler.requestRestartInput();
+        return InputHandler.requestRestart();
     }
 
     public static void main(String[] args) {

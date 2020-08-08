@@ -1,3 +1,5 @@
+package baseball;
+
 public class BallCount {
     private int strike;
     private int ball;
@@ -11,11 +13,11 @@ public class BallCount {
         return strike==3;
     }
 
-    int getStrikeCount(){
+    int getStrike(){
         return this.strike;
     }
 
-    int getBallCount(){
+    int getBall(){
         return this.ball;
     }
 

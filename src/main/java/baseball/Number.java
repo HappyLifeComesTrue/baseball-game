@@ -1,3 +1,5 @@
+package baseball;
+
 import java.util.Random;
 
 public class Number {
@@ -6,6 +8,10 @@ public class Number {
 
     public Number(){
         generateRandomNumber();
+    }
+
+    public Number(String input){
+        for(int i = 0; i < 3; i++) number[i] = Character.getNumericValue(input.charAt(i));
     }
 
     public Number(int[] input){
