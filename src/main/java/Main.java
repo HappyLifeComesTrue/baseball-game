@@ -1,5 +1,4 @@
-import ingame.Game;
-import ui.InputHandler;
+import ui.*;
 
 public class Main {
 

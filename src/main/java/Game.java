@@ -1,4 +1,4 @@
-package ingame;
+import ui.*;
 
 public class Game {
     private Number answer;

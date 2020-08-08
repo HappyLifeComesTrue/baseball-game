@@ -1,9 +1,7 @@
-package ingame;
-
 import java.util.Random;
 
 public class Number {
-    private int[] number = new int[3];
+    int[] number = new int[3];
     Random intGenerator = new Random();
 
     public Number(){
@@ -24,5 +22,6 @@ public class Number {
         }
 
     }
+
 }
 
