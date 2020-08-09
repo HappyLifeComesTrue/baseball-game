@@ -1,9 +1,8 @@
 package baseball;
-
 import java.util.Random;
 
 public class Number {
-    private final static int NUMBERLENGTH = 3;
+    public final static int NUMBERLENGTH = 3;
     int[] number = new int[NUMBERLENGTH];
 
     public Number(){ generateRandomNumber(); }

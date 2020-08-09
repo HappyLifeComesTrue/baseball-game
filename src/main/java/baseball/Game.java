@@ -1,7 +1,5 @@
 package baseball;
-
-import baseball.ui.InputHandler;
-import baseball.ui.OutputHandler;
+import baseball.ui.*;
 
 public class Game {
     private Number answer = new Number();

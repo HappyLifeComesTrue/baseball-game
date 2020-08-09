@@ -18,7 +18,7 @@ public class InputHandler {
 
     private static boolean isCorrectFormat(String userInput){
         //길이 체크
-        if(userInput.length() != 3){
+        if(userInput.length() != Number.NUMBERLENGTH){
             OutputHandler.showNumberLengthError();
             return false;
         }
@@ -29,6 +29,17 @@ public class InputHandler {
             else{
                 OutputHandler.showRequestOnlyNumberError();
                 return false;
+            }
+        }
+
+        for (int i = 0; i < Number.NUMBERLENGTH; i++) {
+            char ch1 = userInput.charAt(i);
+            for (int j = 0; j < i; j++) {   //중복 제거
+                char ch2 = userInput.charAt(j);
+                if (ch1 == ch2){
+                    OutputHandler.showOverlapNumberError();
+                    return false;
+                }
             }
         }
 
