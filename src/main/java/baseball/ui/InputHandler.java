@@ -38,11 +38,14 @@ public class InputHandler {
     public static boolean requestRestart(){
         int input;
         do{
+            OutputHandler.showRestartMessage();
             try{
                 input = scanner.nextInt();
+                scanner.nextLine(); //버퍼 클리어
             }catch(Exception e){
                 //숫자가 아닌 경우
                 OutputHandler.showWrongMenuError();
+                scanner.nextLine(); //버퍼 클리어
                 continue;//재입력 요구
             }
 

@@ -5,7 +5,6 @@ import baseball.ui.*;
 public class Main {
 
     static boolean requestRestart(){
-        OutputHandler.showRestartMessage();
         return InputHandler.requestRestart();
     }
 
@@ -13,6 +12,6 @@ public class Main {
         do{
             Game game = new Game();
             game.start();
-        }while(false/*테스트requestRestart()*/);
+        }while(requestRestart());
     }
 }

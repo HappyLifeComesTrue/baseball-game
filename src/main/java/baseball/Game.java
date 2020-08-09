@@ -13,6 +13,7 @@ public class Game {
             ballCount = BallCounter.count(answer, userInputNumber);
             OutputHandler.showBallCount(ballCount);
         }while(!ballCount.isStrikeOut());
+        OutputHandler.showGameEndMessage();
     }
 
 }

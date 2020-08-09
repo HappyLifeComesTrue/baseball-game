@@ -7,6 +7,7 @@ public class OutputHandler {
     private static final String REQUEST_3_NUMBER = "3자리만 입력해주세요.";
     private static final String REQUEST_ONLY_NUMBER = "1~9사이의 숫자만 입력해주세요. ";
     private static final String REQUEST_WRONG_MENU = "유효하지 않은 선택입니다.";
+    private static final String END_GAME = "3개의 숫자를 모두 맞히셨습니다. 게임을 종료합니다.";
 
     public static void showRestartMessage(){
         System.out.print(REQUEST_RESTART);
@@ -24,6 +25,8 @@ public class OutputHandler {
         System.out.println(REQUEST_ONLY_NUMBER);
     }
 
+    public static void showGameEndMessage(){ System.out.println(END_GAME); }
+
     public static void showBallCount(BallCount ballCount){
         int strike = ballCount.getStrike();
         int ball = ballCount.getBall();
@@ -33,5 +36,6 @@ public class OutputHandler {
         System.out.println();
 
     }
+
 
 }
