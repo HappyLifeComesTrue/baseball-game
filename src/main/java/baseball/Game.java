@@ -12,8 +12,8 @@ public class Game {
             OutputHandler.showRequestNumberMessage();
             Number userInputNumber = InputHandler.requestNumber();
             ballCount = BallCounter.count(answer, userInputNumber);
-            OutputHandler.showBallCount(ballCount);
-        }while(ballCount.isStrikeOut());
+            //OutputHandler.showBallCount(ballCount);
+        }while(/*ballCount.isStrikeOut()*/false);
     }
 
 }

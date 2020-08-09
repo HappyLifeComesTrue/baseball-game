@@ -1,10 +1,26 @@
 package baseball;
 
 public class BallCounter {
-    public static BallCount count(Number answer, Number input){
 
-        return new BallCount(0,0);  //임시 코드. answer와 input을 비교 후 파라미터 기입.
+    public static BallCount count(Number answer, Number input){
+        int strike = 0;
+        int ball = 0;
+
+        //count strike
+        for(int i = 0; i < 3; i++){
+            if(answer.number[i] == input.number[i]) strike++;
+        }
+
+        //count ball
+        for(int i = 0; i < 3; i++){
+            for(int j = 0; j < 3; j++){
+                if(i != j && answer.number[i] == input.number[j]) ball++;
+            }
+        }
+
+        return new BallCount(strike,ball);  //temp
 
     }
-
 }
+
+
