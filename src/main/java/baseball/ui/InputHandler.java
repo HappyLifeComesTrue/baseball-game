@@ -31,10 +31,10 @@ public class InputHandler {
                 return false;
             }
         }
-
+        //중복된 숫자 여부
         for (int i = 0; i < Number.NUMBERLENGTH; i++) {
             char ch1 = userInput.charAt(i);
-            for (int j = 0; j < i; j++) {   //중복 제거
+            for (int j = 0; j < i; j++) {
                 char ch2 = userInput.charAt(j);
                 if (ch1 == ch2){
                     OutputHandler.showOverlapNumberError();
