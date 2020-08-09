@@ -13,11 +13,11 @@ public class BallCount {
         return strike==3;
     }
 
-    int getStrike(){
+    public int getStrike(){
         return this.strike;
     }
 
-    int getBall(){
+    public int getBall(){
         return this.ball;
     }
 

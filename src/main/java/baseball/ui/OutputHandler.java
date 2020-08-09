@@ -25,7 +25,13 @@ public class OutputHandler {
     }
 
     public static void showBallCount(BallCount ballCount){
-        //업데이트 예정. BallCount 객체를 받아 출력할 함수 작성
+        int strike = ballCount.getStrike();
+        int ball = ballCount.getBall();
+        if(strike != 0) System.out.print(strike + " 스트라이크 ");
+        if(ball != 0) System.out.print(ball + " 볼");
+        if(strike == 0 && ball == 0) System.out.print("포볼");
+        System.out.println();
+
     }
 
 }
