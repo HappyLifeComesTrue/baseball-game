@@ -9,10 +9,9 @@ public class Game {
 
     public void start(){
         do{
-            OutputHandler.showRequestNumberMessage();
             Number userInputNumber = InputHandler.requestNumber();
             ballCount = BallCounter.count(answer, userInputNumber);
-            //OutputHandler.showBallCount(ballCount);
+            OutputHandler.showBallCount(ballCount);
         }while(/*ballCount.isStrikeOut()*/false);
     }
 
